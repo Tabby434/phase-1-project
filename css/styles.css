@@ -1,69 +1,165 @@
 /* General Styles */
 body {
-    font-family: 'Poppins', "Harrington";
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fad0c4, #fbc2eb);
     margin: 0;
     padding: 0;
-    background-color: #f2fffe;
     color: #333;
 }
 
-/* Header */
-header {
-    background-color: #060606;
-    color: white;
-    padding: 1rem 0;
-    text-align: center;
+/* Home Screen Background */
+.home-container {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.2rem;
-}
-
-/* Main Content */
-main {
-    padding: 20px;
-    text-align: center;
-}
-
-#gallery-list, #gallery-detail {
-    max-width: 800px;
-    margin: auto;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-#images-container img {
+.home-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    max-width: 400px;
-    margin: 10px 0;
-    border-radius: 5px;
+    height: 100%;
+    background: url('https://i.pinimg.com/736x/f4/3b/53/f43b53560d1d333cb3d03d173e722b60.jpg') no-repeat center center/cover;
+    filter: blur(5px);
+    opacity: 0.6;
+    z-index: -1;
 }
 
-.hidden {
-    display: none;
+/* Logo */
+.logo-container {
+    font-family: 'Old English Text MT', serif;
+    font-size: 3rem;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+.slogan {
+    font-size: 1.5rem;
+    font-style: italic;
+    color: #ffd700;
 }
 
-/* Footer */
-footer {
-    background-color: #222;
-    color: white;
-    text-align: center;
-    padding: 1rem;
+/* Sidebar Menu */
+.sidebar {
     position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    box-shadow: 3px 0 10px rgba(0,0,0,0.3);
+    transition: left 0.3s ease;
+}
+.sidebar h2 {
+    font-family: 'Old English Text MT', serif;
+    color: #ffd700;
+    text-align: center;
+    font-size: 1.8rem;
+}
+.menu-item {
+    font-family: 'Harrington', serif;
+    color: #fff;
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.menu-item:hover {
+    background: rgba(255, 215, 0, 0.5);
+}
+
+/* Gallery Layout - Hidden by Default */
+.gallery-container {
+    display: none;
+    margin-left: 260px;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.image-box {
+    display: none; /* Hidden until a gallery is clicked */
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+    width: 150px;
+}
+.image-box img {
     width: 100%;
-    bottom: 0;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Heart Button */
+.heart {
+    font-size: 2rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+    transition: color 0.3s;
+    color: white;
+}
+.heart.liked {
+    color: red;
+}
+
+/* Comments */
+.comment-box {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    display: block;
+}
+.comment {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 8px;
+    border-radius: 5px;
+    margin-top: 5px;
+    position: relative;
+}
+.delete-comment {
+    background: red;
+    color: white;
+    border: none;
+    padding: 5px;
+    border-radius: 3px;
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+/* Book a Session Section */
+.book-session {
+    text-align: center;
+    margin-top: 20px;
+}
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+.social-icons a {
+    font-size: 2rem;
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+    cursor: pointer;
+}
+.social-icons a:hover {
+    color: #ffd700;
 }
