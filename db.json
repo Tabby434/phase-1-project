@@ -1,0 +1,38 @@
+{
+  "galleries": [
+    {
+      "id": "1",
+      "name": "Nature Photography",
+      "images": [
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRE9kPhmpT8hHw3QPPRevQzHg28ylRpJ0orHg&s",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5_h4bfJW7VZG3_ZssnHqofdYOY-Yqmy1meA&s",
+        "https://images.pexels.com/photos/247373/pexels-photo-247373.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+      ],
+      "likes": 0
+    },
+    {
+      "id": "2",
+      "name": "Urban Landscapes",
+      "images": [
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_FeVLnbGiB8CTVhJcHbeQgfaYhD99FY2yGQ&s",
+        "https://jamesmaherphotography.com/wp-content/uploads/2020/01/City-Urban-landscape-Photography-25.jpg",
+        "https://www.slrlounge.com/wp-content/uploads/2021/01/urban-landscape-photography-tips-inspiration-street-photography.jpg"
+      ],
+      "likes": 0
+    },
+    {
+      "id": "3",
+      "name": "Portraits",
+      "images": [
+        "https://i.pinimg.com/736x/f4/3b/53/f43b53560d1d333cb3d03d173e722b60.jpg",
+        "https://thumbs.dreamstime.com/b/young-man-women-enjoying-new-years-eve-young-men-women-enjoying-new-years-eve-outdoors-127658021.jpg",
+        "https://gmhsart.weebly.com/uploads/6/4/9/6/6496393/369692c958428a5ebb551c559cfa80a4.jpg"
+      ],
+      "likes": 0
+    },
+    {
+      "id": "9ffe"
+    }
+  ],
+  "bookings": []
+}
