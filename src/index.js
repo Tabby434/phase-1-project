@@ -81,4 +81,15 @@ function showGallery(gallery) {
     document.getElementById("gallery-list").classList.add("hidden");
     document.getElementById("gallery-detail").classList.remove("hidden");
     
-   
+   function likeImage(imgElement, gallery) {
+    imgElement.classList.toggle("liked");
+    gallery.likes += imgElement.classList.contains("liked") ? 1 : -1;
+    updateLikes(gallery);
+}
+
+function updateLikes(gallery) {
+    fetch(`http://localhost:3000/galleries/${gallery.id}`, {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ likes: gallery.likes })
+    
