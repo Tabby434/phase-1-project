@@ -73,3 +73,12 @@ function fetchGalleries() {
     })
     .catch(error => console.error("Error fetching galleries:", error));
 }
+
+
+
+
+function showGallery(gallery) {
+    document.getElementById("gallery-list").classList.add("hidden");
+    document.getElementById("gallery-detail").classList.remove("hidden");
+    
+   
