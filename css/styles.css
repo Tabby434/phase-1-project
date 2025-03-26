@@ -1,33 +1,37 @@
-const menuBtn = document.getElementById("menu-btn");
-const navLinks = document.getElementById("nav-links");
-const menuBtnIcon = menuBtn.querySelector("i");
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
 
-menuBtn.addEventListener("click", (e) => {
-  navLinks.classList.toggle("open");
+/* Container for images */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  padding: 20px;
+}
 
-  const isOpen = navLinks.classList.contains("open");
-  menuBtnIcon.setAttribute("class", isOpen ? "ri-close-line" : "ri-menu-line");
-});
+/* Styling for images */
+.gallery img {
+  width: 250px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
 
-navLinks.addEventListener("click", (e) => {
-  navLinks.classList.remove("open");
-  menuBtnIcon.setAttribute("class", "ri-menu-line");
-});
+.gallery img:hover {
+  transform: scale(1.1);
+}
 
-const scrollRevealOption = {
-  distance: "50px",
-  origin: "bottom",
-  duration: 1000,
-};
-ScrollReveal().reveal(".about__container .section__header", {
-  ...scrollRevealOption,
-});
-ScrollReveal().reveal(".about__container .section__description", {
-  ...scrollRevealOption,
-  delay: 500,
-  interval: 500,
-});
-ScrollReveal().reveal(".about__container img", {
-  ...scrollRevealOption,
-  delay: 1500,
-});
+/* Header */
+h1 {
+  font-size: 24px;
+  color: #333;
+  margin-top: 20px;
+}
