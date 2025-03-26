@@ -1,8 +1,23 @@
 document.addEventListener("DOMContentLoaded", () => {
   fetchGalleries();
   document.getElementById("back-button").addEventListener("click", goBack);
+  document
+    .getElementById("home-button")
+    .addEventListener("click", showCoverPage);
   setupGalleryMenu();
 });
+
+function showCoverPage() {
+  document.getElementById("gallery-list").classList.add("hidden");
+  document.getElementById("gallery-detail").classList.add("hidden");
+  document.getElementById("cover-page").classList.remove("hidden");
+}
+
+function goBack() {
+  document.getElementById("gallery-list").classList.remove("hidden");
+  document.getElementById("gallery-detail").classList.add("hidden");
+  document.getElementById("cover-page").classList.add("hidden");
+}
 
 function fetchGalleries() {
   fetch("db.json")
@@ -59,76 +74,94 @@ function showGallery(gallery) {
 
   const imagesContainer = document.getElementById("images-container");
   imagesContainer.innerHTML = "";
+  imagesContainer.style.display = "flex";
+  imagesContainer.style.flexWrap = "wrap";
+  imagesContainer.style.justifyContent = "space-around";
+  imagesContainer.style.gap = "20px";
+  imagesContainer.style.padding = "10px";
+
   gallery.images.forEach((imageUrl) => {
     const imgWrapper = document.createElement("div");
     imgWrapper.classList.add("image-wrapper");
+    imgWrapper.style.display = "flex";
+    imgWrapper.style.flexDirection = "column";
+    imgWrapper.style.alignItems = "center";
+    imgWrapper.style.width = "200px";
+    imgWrapper.style.padding = "10px";
+    imgWrapper.style.background = "#fff";
+    imgWrapper.style.borderRadius = "10px";
+    imgWrapper.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.1)";
 
     const img = document.createElement("img");
     img.src = imageUrl;
     img.alt = "Gallery Image";
+    img.style.width = "100%";
+    img.style.height = "auto";
+    img.style.borderRadius = "10px";
 
-    const heart = document.createElement("button");
+    const heart = document.createElement("span");
     heart.classList.add("heart");
-    heart.innerHTML = "♡";
-    heart.addEventListener("click", () => toggleLike(heart, gallery));
+    heart.innerHTML = "🤍 0";
+    heart.style.cursor = "pointer";
+    heart.dataset.likes = 0;
+    heart.addEventListener("click", () => likeImage(heart));
 
     const commentBox = document.createElement("input");
     commentBox.type = "text";
-    commentBox.placeholder = "Leave a comment...";
+    commentBox.placeholder = "Add a comment...";
     commentBox.classList.add("comment-box");
 
     const submitComment = document.createElement("button");
-    submitComment.textContent = "Comment";
+    submitComment.textContent = "Post";
     submitComment.addEventListener("click", () =>
-      addComment(commentBox.value, imgWrapper)
+      addComment(imgWrapper, commentBox)
     );
+
+    const deleteComment = document.createElement("button");
+    deleteComment.textContent = "Delete Comment";
+    deleteComment.addEventListener("click", () =>
+      deleteLastComment(imgWrapper)
+    );
+
+    const commentsContainer = document.createElement("div");
+    commentsContainer.classList.add("comments-container");
 
     imgWrapper.appendChild(img);
     imgWrapper.appendChild(heart);
     imgWrapper.appendChild(commentBox);
     imgWrapper.appendChild(submitComment);
+    imgWrapper.appendChild(deleteComment);
+    imgWrapper.appendChild(commentsContainer);
     imagesContainer.appendChild(imgWrapper);
   });
 }
 
-function toggleLike(heartElement, gallery) {
-  const isLiked = heartElement.classList.toggle("liked");
-  heartElement.innerHTML = isLiked ? "❤️" : "♡";
-  heartElement.style.color = isLiked ? "red" : "black";
-  gallery.likes += isLiked ? 1 : -1;
-  updateLikes(gallery);
-}
-
-function updateLikes(gallery) {
-  fetch(`http://localhost:3000/galleries/${gallery.id}`, {
-    method: "PATCH",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ likes: gallery.likes }),
-  })
-    .then((response) => response.json())
-    .then((data) => console.log("Likes updated:", data))
-    .catch((error) => console.error("Error updating likes:", error));
-}
-
-function addComment(comment, imgWrapper) {
-  if (comment.trim() !== "") {
-    const commentElement = document.createElement("div");
-    commentElement.classList.add("comment");
-    commentElement.textContent = comment;
-
-    const deleteButton = document.createElement("button");
-    deleteButton.textContent = "Delete";
-    deleteButton.classList.add("delete-comment");
-    deleteButton.addEventListener("click", () => commentElement.remove());
-
-    commentElement.appendChild(deleteButton);
-    imgWrapper.appendChild(commentElement);
+function likeImage(heartElement) {
+  let likes = parseInt(heartElement.dataset.likes);
+  likes++;
+  heartElement.dataset.likes = likes;
+  heartElement.innerHTML = `❤️ ${likes}`;
+  if (likes === 1) {
+    heartElement.style.color = "red";
   }
 }
 
-function goBack() {
-  document.getElementById("gallery-list").classList.remove("hidden");
-  document.getElementById("gallery-detail").classList.add("hidden");
+function addComment(imageWrapper, commentBox) {
+  if (commentBox.value.trim() !== "") {
+    const comment = document.createElement("span");
+    comment.classList.add("comment");
+    comment.textContent = commentBox.value;
+
+    imageWrapper.querySelector(".comments-container").appendChild(comment);
+    commentBox.value = "";
+  }
+}
+
+function deleteLastComment(imageWrapper) {
+  const commentsContainer = imageWrapper.querySelector(".comments-container");
+  if (commentsContainer.lastChild) {
+    commentsContainer.removeChild(commentsContainer.lastChild);
+  }
 }
 
 function setupGalleryMenu() {
