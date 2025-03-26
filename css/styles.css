@@ -19,3 +19,15 @@ const scrollRevealOption = {
   origin: "bottom",
   duration: 1000,
 };
+ScrollReveal().reveal(".about__container .section__header", {
+  ...scrollRevealOption,
+});
+ScrollReveal().reveal(".about__container .section__description", {
+  ...scrollRevealOption,
+  delay: 500,
+  interval: 500,
+});
+ScrollReveal().reveal(".about__container img", {
+  ...scrollRevealOption,
+  delay: 1500,
+});
