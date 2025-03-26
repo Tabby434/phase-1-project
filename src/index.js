@@ -19,3 +19,9 @@ function fetchGalleries() {
     .catch((error) => console.error("Error fetching galleries:", error));
 }
 
+
+document.addEventListener("DOMContentLoaded", () => {
+  fetchGalleries();
+});
+
+ 
