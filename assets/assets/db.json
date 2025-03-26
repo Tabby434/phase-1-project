@@ -1,1 +1,23 @@
-
+{
+  "galleries": [
+    {
+      "id": 1,
+      "name": "Nature Photography",
+      "images": ["IMAGE_URL_1", "IMAGE_URL_2", "IMAGE_URL_3"],
+      "likes": 0
+    },
+    {
+      "id": 2,
+      "name": "Urban Landscapes",
+      "images": ["IMAGE_URL_4", "IMAGE_URL_5", "IMAGE_URL_6"],
+      "likes": 0
+    },
+    {
+      "id": 3,
+      "name": "Portraits",
+      "images": ["IMAGE_URL_7", "IMAGE_URL_8", "IMAGE_URL_9"],
+      "likes": 0
+    }
+  ],
+  "bookings": []
+}
