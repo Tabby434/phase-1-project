@@ -6,7 +6,9 @@
       "images": [
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRE9kPhmpT8hHw3QPPRevQzHg28ylRpJ0orHg&s",
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5_h4bfJW7VZG3_ZssnHqofdYOY-Yqmy1meA&s",
-        "https://images.pexels.com/photos/247373/pexels-photo-247373.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        "https://images.pexels.com/photos/247373/pexels-photo-247373.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "https://static.vecteezy.com/system/resources/thumbnails/053/003/435/small_2x/glowing-red-succulent-plant-in-dark-nature-photo.jpg",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjUnATMBwpnAAZhHp-49pPKwbG35PkFL6Qww&s"
       ],
       "likes": 0
     },
@@ -16,7 +18,9 @@
       "images": [
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_FeVLnbGiB8CTVhJcHbeQgfaYhD99FY2yGQ&s",
         "https://jamesmaherphotography.com/wp-content/uploads/2020/01/City-Urban-landscape-Photography-25.jpg",
-        "https://www.slrlounge.com/wp-content/uploads/2021/01/urban-landscape-photography-tips-inspiration-street-photography.jpg"
+        "https://www.slrlounge.com/wp-content/uploads/2021/01/urban-landscape-photography-tips-inspiration-street-photography.jpg",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTy475XUvdRR7e0IDA4WB3X_v1cVF_l2_YRHA&s",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLHIZ01QfVvRpaa1DkAdvwY-XtQ4762iGpBQ&s"
       ],
       "likes": 0
     },
@@ -26,13 +30,55 @@
       "images": [
         "https://i.pinimg.com/736x/f4/3b/53/f43b53560d1d333cb3d03d173e722b60.jpg",
         "https://thumbs.dreamstime.com/b/young-man-women-enjoying-new-years-eve-young-men-women-enjoying-new-years-eve-outdoors-127658021.jpg",
-        "https://gmhsart.weebly.com/uploads/6/4/9/6/6496393/369692c958428a5ebb551c559cfa80a4.jpg"
+        "https://gmhsart.weebly.com/uploads/6/4/9/6/6496393/369692c958428a5ebb551c559cfa80a4.jpg",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVVGjBXZF4H8RiE1KIQh1suRdQNsxZY0E7Cg&s",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDlsFxGqWzoeafDCcBKIpiUN4__xAI7bDMeVxUSUudbMG7iJ-BQ8uYH5F58ZzDsXx7Zuw&usqp=CAU"
+
       ],
       "likes": 0
     },
-    {
-      "id": "9ffe"
-    }
+    
+      {
+        "id": "3",
+        "name": "Art and culture",
+        "images": [
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFtHZ4xp61hbEghH9Csw4YeTBeyBsuJyb7GQ&s",
+          "https://media.istockphoto.com/id/1156313495/photo/beautiful-and-happy-maasai-tribe-women.jpg?s=612x612&w=0&k=20&c=bhDJieU93t2cryaCNFlhoBnpBjOmEwdm13snWlbcAVM=",
+          "https://www.hadithi.co/content/images/2024/11/kale.jpg",
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlRGG_S2u7TnFdvcn3oZ0TNS7nTm977Uk_Cg&s",
+          "https://www.wildlifekenyasafari.com/wp-content/uploads/2024/05/Guide-to-Swahili-Culture-in-Zanzibar-852x426-1.jpg"
+
+        ],
+        "likes": 0
+      },
+    
+      {
+        "id": "3",
+        "name": "vintage",
+        "images": [
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmuvusTcz4Oy6WdRACxmqMkd30cYA-ySbQUg&s",
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1skDWOK0LE7i5a04US2a6Bk2F6bU1yw6deA&s",
+          "https://webneel.com/daily/sites/default/files/images/daily/10-2016/10-car-vintage-photography.jpg",
+          "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/cf252c33461435.56abae98cd0bb.jpg",
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBievqge2ZMwIpjZeNOsVwCPCSLVXNbn-yuA&s"
+          
+        ],
+        "likes": 0
+      },
+
+      {
+        "id": "3",
+        "name": "architecture",
+        "images": [
+          "https://d150u0abw3r906.cloudfront.net/wp-content/uploads/2021/12/image16-10.png",
+          "https://cdn.fstoppers.com/styles/large-16-9/s3/lead/2019/05/93c641a73b3268c7aa614ce646c1517d.jpg",
+          "https://illustrarch.com/wp-content/uploads/2023/05/2c389a02-9e08-4ef7-8edf-44f912e89c9d.jpg",
+          "https://images.adsttc.com/media/images/59f0/e5c7/b22e/3819/9400/02fc/large_jpg/Fernando_Guerra_FI.jpg?1508959683",
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaBe9Z8IsBdCYVNdjvVU7n7TkpK1divcj19Q&s"
+
+        ],
+        "likes": 0
+      }
   ],
   "bookings": []
 }
