@@ -146,3 +146,37 @@ button:hover {
     margin-top: 5px;
 }
 
+#galleries-container {
+    display: flex;
+    flex-direction: column; /* Aligns galleries in a vertical column */
+    align-items: flex-start; /* Aligns the galleries to the left */
+    padding-left: 20px; /* Adds some spacing from the left edge */
+    gap: 10px; /* Small margin between gallery items */
+    position: absolute;
+    left: 20px;
+    top: 100px; /* Adjust height as needed */
+}
+
+.gallery-item {
+    background-color: rgba(255, 255, 255, 0.1); /* Light transparent background */
+    padding: 0px;
+    border-radius: 0px;
+    cursor: pointer;
+    width: 200px; /* Adjust size as needed */
+    text-align: center;
+    color: white;
+    transition: 0.3s ease;
+}
+
+.gallery-item:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+footer {
+    position: relative; /* Ensures it moves with content */
+    width: 100%;
+    text-align: left;
+    padding: 20px;
+    color: white;
+    margin-top: 550px; /* Adjust this value to move it lower */
+}
